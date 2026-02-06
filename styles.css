@@ -9,8 +9,9 @@
 
 .row {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 .container {
@@ -563,12 +564,72 @@ footer {
 /* RESIZING FOR DIFFERENT DEVICES */
 
 @media (max-width: 1280px) {
+    .row {
+        padding: 0 32px;
+    }
+
+    .plan__btn {
+        max-width: none;
+    }
+
+    .header__row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__input {
+        width: 100%;
+    }
+
     .plan__btn {
         max-width: none;
     }
 }
 
+@media (max-width: 1024px){
+    .header__row{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__left {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
 @media (max-width: 768px) {
+      .header__row,
+  .quality__row,
+  .steps__row,
+  .values__row,
+  .testimonials__row,
+  .start__row {
+    flex-direction: column;
+    text-align: center;
+  }
+ 
+.header__left, .header__right,
+.quality__left, .quality__img,
+.steps__right, .steps__img,
+.values__left, .values__img,
+.testimonials__right, .testimonials__img {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .header__right,
+  .quality__img,
+  .steps__img,
+  .values__img,
+  .testimonials__img {
+    display: flex;
+    justify-content: center;
+  }
+  
     .nav__links {
         display: none;
     }
@@ -577,33 +638,7 @@ footer {
         display: block;
     }
 
-    .pricing__cards {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    p {
-        font-size: 12px;
-    }
-    .header__row {
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .header__left {
-        width: 100%;
-    }
-
-    .header__query {
+       .header__query {
     width: 100%;
     max-width: 500px;
     height: 68px;
@@ -634,6 +669,56 @@ footer {
     font-weight: 700;
     position: static;
 }
+
+.feature{
+    width: 50%;
+}
+
+.quality__row{
+    display: flex;
+    width: 100%;
+}
+
+.steps__right{
+    height: 60%;
+}
+
+.steps__img {
+    margin-bottom: 40px;
+}
+
+    .pricing__cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .pricing__card{
+        width: 80%;
+        margin-bottom: 24px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    p {
+        font-size: 12px;
+    }
+    .header__row {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__left {
+        width: 100%;
+    }
+
 
 .header__img {
     margin: 0 auto;
