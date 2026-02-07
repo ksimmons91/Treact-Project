@@ -196,7 +196,7 @@ ul, ol {
 
 .header__left{
     width: 50%;
-    
+    text-align: center;
 }
 
 .header__para{
@@ -246,6 +246,7 @@ ul, ol {
 .feature__row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .feature__title {
     text-align: center;
@@ -276,6 +277,7 @@ ul, ol {
 
 .quality__left {
     width: 50%;
+    text-align: center;
 }
 
 .quality__img{
@@ -290,7 +292,6 @@ ul, ol {
 
 .steps__row {
     display: flex;
-    align-items: center;
 }
 
 .steps__img {
@@ -302,6 +303,7 @@ ul, ol {
 .steps__right {
     width: 40%;
     height: 100%;
+    text-align: center;
 }
 
 .step {
@@ -355,6 +357,7 @@ ul, ol {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .values__img {
@@ -453,6 +456,9 @@ ul, ol {
 
 .testimonials__right {
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .testimonials__card {
