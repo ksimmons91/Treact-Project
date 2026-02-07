@@ -36,7 +36,6 @@ button {
     font-size: 16px;
     padding: 16px 32px;
     border-radius: 48px;
-    margin: 20px;
     cursor: pointer;
     transition: all 300ms ease;
 }
@@ -52,8 +51,11 @@ h1 {
 }
 
 p {
-    padding: 24px;
     line-height: 1.5;
+}
+
+nav {
+    margin-top: 24px;
 }
 
 ul, ol {
@@ -196,7 +198,6 @@ ul, ol {
 
 .header__left{
     width: 50%;
-    text-align: center;
 }
 
 .header__para{
@@ -206,7 +207,6 @@ ul, ol {
 .header__query {
     width: 100%;
     max-width: 500px;
-    height: 68px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -248,6 +248,7 @@ ul, ol {
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .feature__title {
     text-align: center;
 }
@@ -255,21 +256,24 @@ ul, ol {
 .feature__categories {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
     justify-content: center;
+    max-width: 80%;
 }
 
 .feature {
     width: calc(100%/3);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 12px;
 }
 
 .feature__img {
     padding: 12px;
     border: 1px solid gray;
     border-radius: 100%;
+    display: flex;
 }
 
 
@@ -277,7 +281,10 @@ ul, ol {
 
 .quality__left {
     width: 50%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
 }
 
 .quality__img{
@@ -303,27 +310,22 @@ ul, ol {
 .steps__right {
     width: 40%;
     height: 100%;
-    text-align: center;
 }
 
 .step {
     display: flex;
     flex-direction: column;
-    text-align: center;
     padding: 8px;
 }
 
 .step__top {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 12px;
 }
 
 .step > p {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
 }
 
 .steps__list {
@@ -356,8 +358,8 @@ ul, ol {
     width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    justify-content: space-between;
+    align-items: start;
 }
 
 .values__img {
@@ -367,8 +369,9 @@ ul, ol {
 .value{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
+    margin-top: 12px;
 }
 
 /* PRICING */
@@ -433,16 +436,18 @@ ul, ol {
 
 .testimonials__row {
     display: flex;
+    justify-content: space-between;
 }
 
 .testimonial__bottom {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin-top: 12px;
 }
 
 .testimonials__img {
-    width: 50%;
+    width: 45%;
 }
 
 .testimonials__img--2{
@@ -455,15 +460,13 @@ ul, ol {
 }
 
 .testimonials__right {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 45%;
 }
 
 .testimonials__card {
     display: flex;
-
+    justify-content: center;
+    gap: 12px;
 }
 
 .testimonials__job--title {
@@ -473,6 +476,7 @@ ul, ol {
 
 .testimonial__buttons{
     display: flex;
+    gap: 24px;
 }
 
 .testimonial__btn {
@@ -485,6 +489,7 @@ ul, ol {
     border-radius: 100%;
     border-width: 0;
     padding: 4px;
+    margin: 0;
 }
 
 .testimonial__btn:hover {
@@ -542,10 +547,14 @@ footer {
     text-align: center;
 }
 
+.foot__title{
+    font-weight: bold;
+}
+
 .columns {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     color: white;
     flex-wrap: wrap;
@@ -553,19 +562,21 @@ footer {
 
 .column a {
     color: white;
+    margin-bottom: 12px;
 }
 
 .column {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
+    margin: 12px;
 }
 
 .copyright {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     color: white;
 }
 
@@ -583,7 +594,12 @@ footer {
 
 .copyright__statement {
     color: #cbd5e0;
+    margin: 12px 0;
 }
+
+.copyright__treact{
+        display:flex;
+    }
 
 .social__links{
     display: flex;
@@ -664,6 +680,7 @@ footer {
 .start__row {
     flex-direction: column;
     text-align: center;
+    padding: 32px;
   }
 
 .quality__row, .values__row{
@@ -691,9 +708,9 @@ footer {
        .header__query {
     width: 100%;
     max-width: 500px;
-    height: 68px;
     display: flex;
     flex-direction: column;
+    gap: 12px;
     }
 
 .header__input {
@@ -750,7 +767,18 @@ footer {
 
 .start__buttons{
     flex-direction: column;
-    margin: 0 auto;
+    margin: 12px auto;
+    gap: 12px;
+}
+
+.columns{
+    flex-wrap: wrap;
+}
+    .copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 }
@@ -778,6 +806,15 @@ footer {
     .feature{
         flex-direction: column;
     }
+
+    .columns{
+        justify-content: center;
+    }
+
+    .column{
+        align-items: center;
+    }
+    
 }
 
 @media (max-width: 480px) {
@@ -820,16 +857,11 @@ footer {
 }
 
 .testimonials__right {
-    width: 30%;
+    width: 100%;
 }
 
 .email__button {
     width: 10%;
-}
-
-.copyright {
-    display: flex;
-    flex-direction: column;
 }
 
 .start__row {
