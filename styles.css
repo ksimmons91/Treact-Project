@@ -245,7 +245,7 @@ ul, ol {
 
 .feature__row {
     display: flex;
-    align-items: flex-start;
+    flex-wrap: wrap;
 }
 .feature__title {
     text-align: center;
@@ -255,6 +255,7 @@ ul, ol {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+    justify-content: center;
 }
 
 .feature {
@@ -268,7 +269,6 @@ ul, ol {
     padding: 12px;
     border: 1px solid gray;
     border-radius: 100%;
-    display: flex;
 }
 
 
@@ -307,12 +307,14 @@ ul, ol {
 .step {
     display: flex;
     flex-direction: column;
-    text-align: start;
+    text-align: center;
     padding: 8px;
 }
 
 .step__top {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 12px;
 }
 
@@ -352,11 +354,18 @@ ul, ol {
     width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .values__img {
     width: 50%;
+}
+
+.value{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* PRICING */
@@ -425,6 +434,8 @@ ul, ol {
 
 .testimonial__bottom {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .testimonials__img {
@@ -454,7 +465,14 @@ ul, ol {
     font-weight: bold;
 }
 
+.testimonial__buttons{
+    display: flex;
+}
+
 .testimonial__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #edf2f7;
     color: blue;
     font-size: 24px;
@@ -561,6 +579,10 @@ footer {
     color: #cbd5e0;
 }
 
+.social__links{
+    display: flex;
+}
+
 /* RESIZING FOR DIFFERENT DEVICES */
 
 @media (max-width: 1280px) {
@@ -599,18 +621,48 @@ footer {
         align-items: center;
     }
 
+    .feature{
+    width: auto;
+    max-width: 384px;
+}
+
+    .feature__categories{
+        max-width: 768px;
+}
+
+ .nav__links {
+        display: none;
+ }
+
+    .btn__menu {
+     display: block;
+}
+
+.start__title {
+    text-align: center;
+    width: 100%;
+    max-width: 512px;
+}
+
+.start__buttons{
+    width: auto;
+}
+
+
 }
 
 @media (max-width: 768px) {
-      .header__row,
-  .quality__row,
-  .steps__row,
-  .values__row,
-  .testimonials__row,
-  .start__row {
+.header__row,
+.steps__row,
+.testimonials__row,
+.start__row {
     flex-direction: column;
     text-align: center;
   }
+
+.quality__row, .values__row{
+    flex-direction: column-reverse;
+}
  
 .header__left, .header__right,
 .quality__left, .quality__img,
@@ -629,14 +681,6 @@ footer {
     display: flex;
     justify-content: center;
   }
-  
-    .nav__links {
-        display: none;
-    }
-
-    .btn__menu {
-        display: block;
-    }
 
        .header__query {
     width: 100%;
@@ -670,13 +714,8 @@ footer {
     position: static;
 }
 
-.feature{
-    width: 50%;
-}
-
-.quality__row{
-    display: flex;
-    width: 100%;
+.feature__categories{
+    justify-content: center;
 }
 
 .steps__right{
@@ -695,10 +734,44 @@ footer {
     }
 
     .pricing__card{
-        width: 80%;
+        width: 60%;
         margin-bottom: 24px;
     }
 
+.start__row > h1 {
+    font-size: 24px;
+}
+
+.start__buttons{
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+}
+
+@media(max-width: 640px){
+    .testimonials__card{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial__buttons{
+        margin-top: 32px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .testimonial__bottom{
+        flex-direction: column;
+    }
+
+    .values__list{
+        flex-direction: column;
+    }
+
+    .feature{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 480px) {
@@ -744,21 +817,22 @@ footer {
     width: 30%;
 }
 
-.feature {
-    width: 50%;
+.email__button {
+    width: 10%;
 }
 
-    .email__button {
-        width: 10%;
-    }
+.copyright {
+    display: flex;
+    flex-direction: column;
+}
 
-    .copyright {
-        display: flex;
-        flex-direction: column;
-    }
+.start__row {
+    display: flex;
+    flex-direction: column;
+}
 
-    .start__row {
-        display: flex;
-        flex-direction: column;
-    }
+.column {
+    width: calc(100%/3);
+    padding: 20px 0;
+}
 }
