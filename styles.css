@@ -557,7 +557,7 @@ ul, ol {
 .testimonial__bottom {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 12px;
 }
 
@@ -569,6 +569,7 @@ ul, ol {
 .testimonials__img--2{
     height: 80px;
     border-radius: 500px;
+    margin-right: 12px;
 }
 
 .stars {
@@ -593,8 +594,7 @@ ul, ol {
 
 .testimonials__card {
     display: flex;
-    justify-content: center;
-    gap: 12px;
+    margin-right: 12px;
 }
 
 .testimonials__job--title {
@@ -630,7 +630,7 @@ ul, ol {
     background-color: blue;
     color: white;
     display: flex;
-    padding: 80px;
+    padding: 56px;
     text-align: center;
     align-items: center;
 }
@@ -642,6 +642,7 @@ ul, ol {
 .start__btn--1 {
     background-color: #f56565;
     transition: all 300ms ease;
+    margin-right: 24px;
 }
 
 .start__btn--1:hover {
@@ -677,6 +678,7 @@ footer {
 
 .foot__title{
     font-weight: bold;
+    margin-bottom: 12px;
 }
 
 .columns {
@@ -764,6 +766,10 @@ footer {
     .plan__btn {
         max-width: none;
     }
+
+    .start__row{
+        padding: 56px;
+    }
 }
 
 @media (max-width: 1024px){
@@ -781,12 +787,13 @@ footer {
         text-align: center;
         flex-direction: column;
         align-items: center;
+        width: 70%;
     }
 
     .feature{
     width: auto;
     max-width: 384px;
-}
+}  
 
     .feature__categories{
         max-width: 768px;
@@ -816,6 +823,12 @@ footer {
 
 .start__buttons{
     width: auto;
+    margin-top: 24px;
+}
+
+.start__row {
+    flex-direction: column;
+    text-align: center;
 }
 
 
@@ -824,8 +837,7 @@ footer {
 @media (max-width: 768px) {
 .header__row,
 .steps__row,
-.testimonials__row,
-.start__row {
+.testimonials__row {
     flex-direction: column;
     text-align: center;
     padding: 32px;
@@ -889,6 +901,17 @@ footer {
     justify-content: center;
 }
 
+ .feature{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .feature__statement{
+       text-align: center;
+       align-items: center;
+    }
+
 .steps__right{
     height: 60%;
 }
@@ -917,6 +940,10 @@ footer {
     flex-direction: column;
     margin: 12px auto;
     gap: 12px;
+}
+
+.start__btn--1{
+    margin-right: 0;
 }
 
 .columns{
@@ -956,7 +983,7 @@ footer {
     }
 
     .columns{
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .column{
@@ -1017,6 +1044,9 @@ footer {
     flex-direction: column;
 }
 
+.columns{
+    justify-content: space-around;
+}
 .column {
     width: calc(100%/3);
     padding: 20px 0;
